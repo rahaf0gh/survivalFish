@@ -48,9 +48,41 @@ canvas { display: block; }
 }
 #restart-btn:hover { background: rgba(255,255,255,0.22); }
 #instructions {
-  position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+  position: absolute; margin-top: 8px; left: 50%; transform: translateX(-50%);
   color: rgba(255,255,255,0.35); font-size: 13px; white-space: nowrap;
 }
+
+#footer-credits {
+position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+    margin-top: 14px;
+    width: 100%;
+    max-width: 680px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  #footer-credits span {
+    font-size: 12px;
+    color: #888;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  #footer-credits span b {
+    color: #FAC775;
+    font-weight: 600;
+  }
+
+  #footer-credits .copy {
+    color: #555;
+    font-size: 11px;
+  }
 </style>
 </head>
 <body>
@@ -78,7 +110,16 @@ canvas { display: block; }
     <button id="restart-btn" onclick="restartGame()">🔄 العب مجدداً</button>
   </div>
   <div id="instructions">تحكم بالسمكة بالماوس أو إصبعك على الشاشة</div>
+
+<div id="footer-credits">
+  <span>تم تطويره بواسطة الطالبات: <b>لانا &nbsp;&nbsp;·&nbsp;&nbsp; ترف &nbsp;&nbsp;·&nbsp;&nbsp; ريفان</b></span>
+  <span>إشراف الأستاذة: <b>رهف فهد</b></span>
+  <span class="copy">© جميع الحقوق محفوظة 2026</span>
 </div>
+</div>
+
+
+
 
 <script>
 const canvas = document.getElementById('c');
